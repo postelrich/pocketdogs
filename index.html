@@ -26,8 +26,6 @@
 
 		<div id="about" class="section grey darken-4">
       <div class="row container">
-        <h2 class="header"><p class="grey-text">About</p></h2>
-
         <div class="row">
           <div class="col s3">
             <div class="card small">
@@ -35,7 +33,7 @@
                 <img class="activator" src="static/img/kang-about.jpg">
               </div>
               <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Mike Kang<i class="material-icons right">more_vert</i></span>
+                <span class="card-title activator grey-text text-darken-4">Mike Kang<i class="material-icons right">expand_less</i></span>
                 <p>Vocals/Bass</p>
               </div>
               <div class="card-reveal">
@@ -50,7 +48,7 @@
                 <img class="responsive-img activator" src="static/img/nick-about.jpg">
               </div>
               <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Nick Pollack<i class="material-icons right">more_vert</i></span>
+                <span class="card-title activator grey-text text-darken-4">Nick Pollack<i class="material-icons right">expand_less</i></span>
                 <p>Tallest Guitarist in the World</p>
               </div>
               <div class="card-reveal">
@@ -65,7 +63,7 @@
                 <img class="activator" src="static/img/rice-about.jpg">
               </div>
               <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Mike Rice<i class="material-icons right">more_vert</i></span>
+                <span class="card-title activator grey-text text-darken-4">Mike Rice<i class="material-icons right">expand_less</i></span>
                 <p>Guitars/Eagle</p>
               </div>
               <div class="card-reveal">
@@ -80,7 +78,7 @@
                 <img class="activator" src="static/img/rich-about.jpg">
               </div>
               <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Rich Postelnik<i class="material-icons right">more_vert</i></span>
+                <span class="card-title activator grey-text text-darken-4">Rich Postelnik<i class="material-icons right">expand_less</i></span>
                 <p>Drums</p>
               </div>
               <div class="card-reveal">
@@ -93,30 +91,57 @@
 		</div>
 
 		<div id="music" class="section grey darken-4">
-      <div class="row container">
-        <h2 class="header">Music</h2>
-        <p class="grey-text">We are a rock band</p>
+      <div class="row">
+        <div id="music-section-img" class="col s6" style="padding:0"><img class="responsive-img" src="static/img/bg-photo1.jpg"></div>
+        <div id="soundcloud" class="col s6" style="padding:0">
+          <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/239971267&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+        </div>
       </div>
 		</div>
 
-		<div id="photos" class="section grey darken-4">
-      <div class="row container">
-        <h2 class="header">Pocket Dogs</h2>
-        <p class="grey-text">We are a rock band</p>
+    <div id="photos" class="section">
+      <div class="carousel carousel-slider center" data-indicators="true">
+        <a class="carousel-item" href="#one!"><img src="static/img/band-photo1.jpg"></a>
+        <a class="carousel-item" href="#two!"><img src="static/img/band-photo2.jpg"></a>
+        <a class="carousel-item" href="#three!"><img src="static/img/band-photo3.jpg"></a>
       </div>
-		</div>
+    </div>
 
 		<div id="upcoming" class="section grey darken-4">
       <div class="row container">
-        <h2 class="header">Upcoming Shows</h2>
-        <p class="grey-text">We are a rock band</p>
+        <h2 class="header white-text">Upcoming Shows</h2>
+        <ul class="collection">
+          <li class="collection-item avatar grey darken-4">
+            <img src="http://americanbeautynyc.com/wp-content/uploads/2016/03/AB-colorlogo-white-outline.png" alt="" class="circle">
+            <span class="title white-text">Birthday Gig</span>
+            <p class="white-text"><a href="http://americanbeautynyc.com/">American Beauty NYC</a><br>
+               May 26, 2017 7:30 PM
+            </p>
+          </li>
+        </ul>
       </div>
 		</div>
 
 		<div id="photos" class="section grey darken-4">
       <div class="row container">
-        <h2 class="header">Contact</h2>
-        <p class="grey-text">We are a rock band</p>
+          <h2 class="header white-text">Contact</h2>
+          <div class="row">
+            <div class="col s1">
+              <i class="medium material-icons">
+                <a href="mailto:pocketdogsband@gmail.com">
+                  <p class="white-text">email<p>
+                </a>
+              </i>
+            </div>
+            <div class="col s1">
+              <i class="medium material-icons">
+                <a href="https://www.facebook.com/pocketdogsband/">
+                  <p class="white-text">thumb_up<p>
+                </a>
+              </i>
+            </div>
+          </div>
+        </div>
       </div>
 		</div>
           
@@ -125,6 +150,8 @@
     <script>
       $(document).ready(function(){
         $('.parallax').parallax();
+        $('.carousel.carousel-slider').carousel({fullWidth: true, duration: 2000});
+        $("#music-section-img").css("height", $("#soundcloud").height());
       });
     </script>
   </body>
