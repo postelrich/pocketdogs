@@ -2,10 +2,26 @@
   <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+  html, body, .block {
+    height: 100%;
+    width: 100%
+  }
+  .pin-top {
+    position: relative;
+  }
+  .pin-bottom {
+    position: relative;
+  }
+  .pinned {
+    width: 100%;
+    position: fixed !important;
+  }
+</style>
   </head>
 
-  <body>
-    <div class="navbar">
+  <body class="black">
+    <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper grey darken-4">
           <a href="#" class="brand-logo">Pocket Dogs</a>
@@ -20,111 +36,123 @@
       </nav>
     </div>
 
-		<div class="parallax-container">
-      <div class="parallax"><img src="static/img/logo.jpg"></div>
+    <div id="logo" class="block">
+      <div class="pushpin pinned black" style="display:flex;align-items:center;justify-content:center;" data-target="logo">
+        <img class="responsive-img" style="width=100%;" src="static/img/logo.jpg">
+      </div>
     </div>
 
-		<div id="about" class="section grey darken-4">
-      <div class="row container">
-        <div class="row">
-          <div class="col s3">
-            <div class="card small">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="static/img/kang-about.jpg">
+    <div id="about" class="block">
+      <div class="pushpin section grey darken-4 pin-top" data-target="about">
+        <div class="row container">
+          <div class="row">
+            <div class="col s3">
+              <div class="card small">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="static/img/kang-about.jpg">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Mike Kang<i class="material-icons right">expand_less</i></span>
+                  <p>Vocals/Bass</p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Mike Kang<i class="material-icons right">close</i></span>
+                  <p>Half Korean and Half Korean, Mike Kang pushes the limit on lewd stage performances. This includes smiling, clapping his hands, and singing songs.</p>
+                </div>
               </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Mike Kang<i class="material-icons right">expand_less</i></span>
-                <p>Vocals/Bass</p>
+            </div>
+            <div class="col s3">
+              <div class="card small">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="responsive-img activator" src="static/img/nick-about.jpg">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Nick Pollack<i class="material-icons right">expand_less</i></span>
+                  <p>Tallest Guitarist in the World</p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Nick Pollack<i class="material-icons right">close</i></span>
+                  <p>Tired of his career roaming the Earth helping people get things down from cabinets, Nick uses his abnormally long appendages to achieve sounds on the guitar that a normal sized human could not achieve.</p>
+                </div>
               </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Mike Kang<i class="material-icons right">close</i></span>
-                <p>Half Korean and Half Korean, Mike Kang pushes the limit on lewd stage performances. This includes smiling, clapping his hands, and singing songs.</p>
+            </div>
+            <div class="col s3">
+              <div class="card small">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="static/img/rice-about.jpg">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Mike Rice<i class="material-icons right">expand_less</i></span>
+                  <p>Guitar/Eagle</p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Mike Rice<i class="material-icons right">close</i></span>
+                  <p>A mystical creature, the man eagle, Mike Rice lacked physical capability to communicate with his eagle breathren. Determined to speak to the eagles and all creatures of this mortal plane, he learned to produce the melodic screech of the eagle through the guitar.  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col s3">
+              <div class="card small">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="static/img/rich-about.jpg">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Rich Postelnik<i class="material-icons right">expand_less</i></span>
+                  <p>Drums</p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Rich Postelnik<i class="material-icons right">close</i></span>
+                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col s3">
-            <div class="card small">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="responsive-img activator" src="static/img/nick-about.jpg">
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Nick Pollack<i class="material-icons right">expand_less</i></span>
-                <p>Tallest Guitarist in the World</p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Nick Pollack<i class="material-icons right">close</i></span>
-                <p>Tired of his career roaming the Earth helping people get things down from cabinets, Nick uses his abnormally long appendages to achieve sounds on the guitar that a normal sized human could not achieve.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col s3">
-            <div class="card small">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="static/img/rice-about.jpg">
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Mike Rice<i class="material-icons right">expand_less</i></span>
-                <p>Guitar/Eagle</p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Mike Rice<i class="material-icons right">close</i></span>
-                <p>A mystical creature, the man eagle, Mike Rice lacked physical capability to communicate with his eagle breathren. Determined to speak to the eagles and all creatures of this mortal plane, he learned to produce the melodic screech of the eagle through the guitar.  </p>
-              </div>
-            </div>
-          </div>
-          <div class="col s3">
-            <div class="card small">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="static/img/rich-about.jpg">
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Rich Postelnik<i class="material-icons right">expand_less</i></span>
-                <p>Drums</p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Rich Postelnik<i class="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
-              </div>
-            </div>
-          </div>
-      </div>
-		</div>
-
-		<div id="music" class="section grey darken-4">
-      <div class="row">
-        <div id="music-section-img" class="col s6" style="padding:0"><img class="responsive-img" src="static/img/bg-photo1.jpg"></div>
-        <div id="soundcloud" class="col s6" style="padding:0">
-          <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/239971267&amp;color=424242&amp;theme_color=424242&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
-          <!--<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/239971267&amp;color=424242&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;theme_color=424242"></iframe>-->
         </div>
       </div>
 		</div>
 
-    <div id="photos" class="section">
-      <div class="carousel carousel-slider center" data-indicators="true">
-        <a class="carousel-item" href="#one!"><img src="static/img/band-photo1.jpg"></a>
-        <a class="carousel-item" href="#two!"><img src="static/img/band-photo2.jpg"></a>
-        <a class="carousel-item" href="#three!"><img src="static/img/band-photo3.jpg"></a>
+    <div id="music" class="block">
+      <div class="pushpin section grey darken-4 pin-top" data-target="music">
+        <div class="row">
+          <div id="music-section-img" class="col s6" style="padding:0"><img class="responsive-img" src="static/img/bg-photo1.jpg"></div>
+          <div id="soundcloud" class="col s6" style="padding:0">
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/239971267&amp;color=424242&amp;theme_color=424242&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+            <!--<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/239971267&amp;color=424242&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;theme_color=424242"></iframe>-->
+          </div>
+        </div>
       </div>
     </div>
 
-		<div id="upcoming" class="section grey darken-4">
-      <div class="row container">
-        <h2 class="header white-text">Upcoming Shows</h2>
-        <ul class="collection">
-          <li class="collection-item avatar grey darken-4">
-            <img src="http://americanbeautynyc.com/wp-content/uploads/2016/03/AB-colorlogo-white-outline.png" alt="" class="circle">
-            <span class="title white-text">Birthday Gig</span>
-            <p class="white-text"><a href="http://americanbeautynyc.com/">American Beauty NYC</a><br>
-               May 26, 2017 7:30 PM
-            </p>
-          </li>
-        </ul>
+    <div id="photos" class="block">
+      <div class="pushpin section pin-top" data-target="photos">
+        <div class="carousel carousel-slider center" data-indicators="true">
+          <a class="carousel-item" href="#one!"><img src="static/img/band-photo1.jpg"></a>
+          <a class="carousel-item" href="#two!"><img src="static/img/band-photo2.jpg"></a>
+          <a class="carousel-item" href="#three!"><img src="static/img/band-photo3.jpg"></a>
+        </div>
       </div>
-		</div>
+    </div>
 
-		<div id="contact" class="section grey darken-4">
-      <div class="row container">
+    <div id="upcoming" class="block">
+      <div class="pushpin section grey darken-4 pin-top" data-target="upcoming">
+        <div class="row container">
+          <h2 class="header white-text">Upcoming Shows</h2>
+          <ul class="collection">
+            <li class="collection-item avatar grey darken-4">
+              <img src="http://americanbeautynyc.com/wp-content/uploads/2016/03/AB-colorlogo-white-outline.png" alt="" class="circle">
+              <span class="title white-text">Birthday Gig</span>
+              <p class="white-text"><a href="http://americanbeautynyc.com/">American Beauty NYC</a><br>
+                 May 26, 2017 7:30 PM
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact" class="block">
+      <div class="section grey darken-4 pin-top" data-target="contact">
+        <div class="row container">
           <h2 class="header white-text">Contact</h2>
           <div class="row">
             <a class="waves-effect waves-light btn green darken-3" href="mailto:pocketdogsband@gmail.com">
@@ -144,7 +172,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
     <script>
       $(document).ready(function(){
-        $('.parallax').parallax();
+        $('.pushpin').each(function() {
+          var $this = $(this);
+          var $target = $('#' + $(this).attr('data-target'));
+          $this.pushpin({
+            top: $target.offset().top, 
+            offset: $('.navbar-fixed').height(),
+            bottom: $target.offset().top + $target.outerHeight() - $this.height()
+          });
+        });
         $('.carousel.carousel-slider').carousel({fullWidth: true});
         $("#music-section-img").css("height", $("#soundcloud").height());
       });
