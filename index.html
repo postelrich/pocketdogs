@@ -17,13 +17,25 @@
     width: 100%;
     position: fixed !important;
   }
+  body {
+    background-color: #12113;
+  }
+  .nav-wrapper, .block, .section {
+    background-color: #222725;
+  }
+  .brand-logo, nav ul a, .header {
+    color: #E4E6C3 !important;
+  }
+  .card, .card-reveal {
+    background-color: #E4E6C3 !important;
+  }
 </style>
   </head>
 
-  <body class="black">
+  <body>
     <div class="navbar-fixed">
       <nav>
-        <div class="nav-wrapper grey darken-4">
+        <div class="nav-wrapper">
           <a href="#" class="brand-logo">Pocket Dogs</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="#about">About</a></li>
@@ -43,7 +55,7 @@
     </div>
 
     <div id="about" class="block">
-      <div class="pushpin section grey darken-4 pin-top" data-target="about">
+      <div class="pushpin section pin-top" data-target="about">
         <div class="row container">
           <div class="row">
             <div class="col s3">
@@ -112,11 +124,11 @@
 		</div>
 
     <div id="music" class="block">
-      <div class="pushpin section grey darken-4 pin-top" data-target="music">
+      <div class="pushpin section pin-top" data-target="music">
         <div class="row">
-          <div id="music-section-img" class="col s6" style="padding:0"><img class="responsive-img" src="static/img/bg-photo1.jpg"></div>
+          <div class="col s3"></div>
           <div id="soundcloud" class="col s6" style="padding:0">
-            <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/239971267&amp;color=424242&amp;theme_color=424242&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+            <iframe width="100%" height="500" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/239971267&amp;color=424242&amp;theme_color=424242&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
             <!--<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/239971267&amp;color=424242&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;theme_color=424242"></iframe>-->
           </div>
         </div>
@@ -126,19 +138,26 @@
     <div id="photos" class="block">
       <div class="pushpin section pin-top" data-target="photos">
         <div class="carousel carousel-slider center" data-indicators="true">
+          <div class="carousel-fixed-item valign-wrapper left">
+            <i class="material-icons">keyboard-arrow-left</i>
+          </div>
+          <div class="carousel-fixed-item valign-wrapper right">
+            <i class="material-icons">keyboard-arrow-right</i>
+          </div>
           <a class="carousel-item" href="#one!"><img src="static/img/band-photo1.jpg"></a>
           <a class="carousel-item" href="#two!"><img src="static/img/band-photo2.jpg"></a>
           <a class="carousel-item" href="#three!"><img src="static/img/band-photo3.jpg"></a>
+          <a class="carousel-item" href="#four!"><img src="static/img/bg-photo1.jpg"></a>
         </div>
       </div>
     </div>
 
     <div id="upcoming" class="block">
-      <div class="pushpin section grey darken-4 pin-top" data-target="upcoming">
+      <div class="pushpin section pin-top" data-target="upcoming">
         <div class="row container">
-          <h2 class="header white-text">Upcoming Shows</h2>
+          <h2 class="header">Upcoming Shows</h2>
           <ul class="collection">
-            <li class="collection-item avatar grey darken-4">
+            <li class="collection-item avatar">
               <img src="http://americanbeautynyc.com/wp-content/uploads/2016/03/AB-colorlogo-white-outline.png" alt="" class="circle">
               <span class="title white-text">Birthday Gig</span>
               <p class="white-text"><a href="http://americanbeautynyc.com/">American Beauty NYC</a><br>
@@ -151,9 +170,9 @@
     </div>
 
     <div id="contact" class="block">
-      <div class="section grey darken-4 pin-top" data-target="contact">
+      <div class="section pin-top" data-target="contact">
         <div class="row container">
-          <h2 class="header white-text">Contact</h2>
+          <h2 class="header">Contact</h2>
           <div class="row">
             <a class="waves-effect waves-light btn green darken-3" href="mailto:pocketdogsband@gmail.com">
               <i class="material-icons right">email</i>
@@ -181,7 +200,7 @@
             bottom: $target.offset().top + $target.outerHeight() - $this.height()
           });
         });
-        $('.carousel.carousel-slider').carousel({fullWidth: true});
+        $('.carousel.carousel-slider').carousel({fullWidth: true, indicators: true});
         $("#music-section-img").css("height", $("#soundcloud").height());
       });
     </script>
