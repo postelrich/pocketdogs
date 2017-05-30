@@ -1,7 +1,16 @@
-html, body, .block {
+html, body {
   height: 100%;
-  width: 100%
+  width: 100%;
 }
+
+.block {
+  height: 90%;
+  width: 100%;
+}
+
+/*.carousel-item {*/
+  /*height: 60% !important;*/
+/*}*/
 
 .pin-top {
   position: relative;
@@ -29,5 +38,15 @@ body {
 }
 
 .card, .card-reveal {
-  background-color: #E4E6C3 !important;
+  background-color: #F7F7F2 !important;
+}
+
+#upcoming li {
+  background-color: #121113;
+}
+
+.galleria { 
+  /*max-width: 700px; */
+  height: 700px; 
+  background: #000;
 }

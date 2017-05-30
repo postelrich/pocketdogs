@@ -2,6 +2,7 @@
   <head>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/collageplus/0.3.3/css/transitions.min.css">
     <link href="static/css/main.css" rel="stylesheet">
   </head>
 
@@ -110,17 +111,15 @@
 
     <div id="photos" class="block">
       <div class="pushpin section pin-top" data-target="photos">
-        <div class="carousel carousel-slider center" data-indicators="true">
-          <div class="carousel-fixed-item valign-wrapper left">
-            <i class="material-icons">keyboard-arrow-left</i>
+        <div class="row">
+          <div class="col s2"></div>
+          <div class="galleria col s8">
+            <img src="static/img/band-photo1.jpg">
+            <img src="static/img/band-photo2.jpg">
+            <img src="static/img/band-photo3.jpg">
+            <img src="static/img/bg-photo1.jpg">
           </div>
-          <div class="carousel-fixed-item valign-wrapper right">
-            <i class="material-icons">keyboard-arrow-right</i>
-          </div>
-          <a class="carousel-item" href="#one!"><img src="static/img/band-photo1.jpg"></a>
-          <a class="carousel-item" href="#two!"><img src="static/img/band-photo2.jpg"></a>
-          <a class="carousel-item" href="#three!"><img src="static/img/band-photo3.jpg"></a>
-          <a class="carousel-item" href="#four!"><img src="static/img/bg-photo1.jpg"></a>
+          <div class="col s2"></div>
         </div>
       </div>
     </div>
@@ -162,6 +161,8 @@
           
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js"></script>
+
     <script>
       $(document).ready(function(){
         $('.pushpin').each(function() {
@@ -173,7 +174,8 @@
             bottom: $target.offset().top + $target.outerHeight() - $this.height()
           });
         });
-        $('.carousel.carousel-slider').carousel({fullWidth: true, indicators: true});
+        Galleria.loadTheme('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/themes/classic/galleria.classic.min.js');
+        Galleria.run('.galleria');
         $("#music-section-img").css("height", $("#soundcloud").height());
       });
     </script>
